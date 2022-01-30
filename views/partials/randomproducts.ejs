@@ -1,0 +1,10 @@
+<% products.forEach(elt => { %> 
+    <section class="randomProducts">
+        <a href="/product/<%- elt._id %> ">
+            <div>
+                <img src="<%- elt.ProductLink %> " alt="<%- elt.ProductName %> ">
+                <p><%- elt.ProductName %> </p>
+            </div>
+        </a>
+    </section>
+    <% }) %> 

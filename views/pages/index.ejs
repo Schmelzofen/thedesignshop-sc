@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>The Design Shop</title>
+</head>
+<body>
+    <%- include("../partials/header.ejs") %> 
+    <main>
+        <section class="products">
+            <% products.forEach(elt => { %> 
+                <a href="/product/<%- elt._id %> ">
+                    <div>
+                        <img src="<%- elt.ProductLink %> " alt="<%- elt.ProductName %> ">
+                    </div>
+                    <div class="productNamePrice">
+                        <span><%- elt.ProductName %> </span>
+                        <span>$<%- elt.Price %>.00</span>
+                    </div>
+                    <div class="productCompany">
+                        <p><%- elt.Company %> </p>
+                    </div>
+                </a>
+            <% }) %> 
+        </section>
+    </main>
+    <footer>
+        <a href="#top">THE DESIGN SHOP</a>
+    </footer>
+</body>
+</html>

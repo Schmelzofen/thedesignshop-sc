@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <title>The Design Shop</title>
+</head>
+
+<body>
+  <%- include("../partials/header.ejs") %>
+  <main>
+    <section class="productDetail">
+      <% products.forEach(elt => { %>
+      <div>
+        <div class="editDelete show">
+          <a href="#editproduct">Edit</a>
+          <form action="/delete/<%- elt._id %> " method="post">
+            <input type="submit" value="Delete" />
+          </form>
+        </div>
+        <img src="<%- elt.ProductLink %> " alt="<%- elt.ProductName %> " />
+        <div class="productNamePrice">
+          <span><%- elt.ProductName %> </span>
+          <span>$<%- elt.Price %>.00</span>
+        </div>
+        <div class="productCompany">
+          <p><%- elt.Company %></p>
+        </div>
+        <div class="productDescription">
+          <h2>Product Description:</h2>
+          <p><%- elt.Description || "No description available." %></p>
+        </div>
+        <div class="buyProduct show">
+          <button onclick="location.href='<%- elt.LinkShop %>'">
+            BUY PRODUCT
+          </button>
+        </div>
+      </div>
+      <section class="productEdit hide">
+        <h2 id="editproduct">EDIT PRODUCT</h2>
+        <div class="editProduct">
+          <form action="/editproduct" method="post">
+            <input type="text" name="ProductName" value="<%- elt.ProductName %>" />
+            <input type="text" name="ProductLink" value="<%- elt.ProductLink %>" />
+            <input type="text" name="LinkShop" value="<%- elt.LinkShop || "No Link available" %>">
+            <input type="text" name="Company" value="<%- elt.Company %>" />
+            <input type="text" name="Price" value="<%- elt.Price %>" />
+            <input type="hidden" name="id" value="<%- elt._id %>" />
+            <textarea name="Description" id="" cols="30" rows="10"><%- elt.Description
+                || "No description available." %></textarea>
+            <input type="submit" value="EDIT PRODUCT" />
+          </form>
+        </div>
+      </section>
+      <% }) %>
+    </section>
+  </main>
+  <footer>
+    <a href="#top">THE DESIGN SHOP</a>
+  </footer>
+  <script src="/js/main.js"></script>
+</body>
+
+</html>
