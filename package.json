@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "mkdir assets assets/html assets/js assets/css assets/scss assets/font assets/img && touch index.html assets/scss/style.scss assets/css/style.css",
-    "sass": "sass --watch assets/scss/style.scss assets/css/style.css"
+    "startsass": "mkdir assets assets/html assets/js assets/css assets/scss assets/font assets/img && touch index.html assets/scss/style.scss assets/css/style.css",
+    "sass": "sass --watch assets/scss/style.scss assets/css/style.css",
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
