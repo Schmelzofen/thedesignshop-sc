@@ -1,21 +1,21 @@
 {
-  "name": "package",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "startsass": "mkdir assets assets/html assets/js assets/css assets/scss assets/font assets/img && touch index.html assets/scss/style.scss assets/css/style.css",
-    "sass": "sass --watch assets/scss/style.scss assets/css/style.css",
-    "start": "node index.js"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "dotenv": "^14.3.2",
-    "ejs": "^3.1.6",
-    "express": "^4.17.2",
-    "formidable": "^2.0.1",
-    "mongodb": "^4.3.1",
-    "mongoose": "^6.1.8"
-  }
+    "name": "package",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "startsass": "mkdir assets assets/html assets/js assets/css assets/scss assets/font assets/img && touch index.html assets/scss/style.scss assets/css/style.css",
+        "sass": "sass --watch assets/scss/style.scss assets/css/style.css",
+        "start": "node index.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "dotenv": "^14.3.2",
+        "ejs": "^3.1.6",
+        "express": "^4.17.2",
+        "formidable": "^2.0.1",
+        "mongodb": "^4.3.1",
+        "mongoose": "^6.1.8"
+    }
 }
